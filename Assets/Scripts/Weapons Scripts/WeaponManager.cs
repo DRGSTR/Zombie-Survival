@@ -87,4 +87,25 @@ public class WeaponManager : MonoBehaviour
         }
     }
 
+    public void Attack()
+    {
+        if(current_type_control == TypeControlAttack.Hold)
+        {
+            current_Weapon.CallAttack();
+        }
+        else if(current_type_control == TypeControlAttack.Click)
+        {
+            if(!isShooting)
+            {
+                current_Weapon.CallAttack();
+                isShooting = true;
+            }
+        }
+    }
+
+    public void ResetAttack()
+    {
+        isShooting = false;
+    }
+
 } // class
