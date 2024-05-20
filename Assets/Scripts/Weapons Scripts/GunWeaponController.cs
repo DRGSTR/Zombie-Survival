@@ -16,6 +16,25 @@ public class GunWeaponController : WeaponController
 
     void Start()
     {
+        if(!GamePlayController.instance.bullet_And_BulletFX_Created)
+        {
+            GamePlayController.instance.bullet_And_BulletFX_Created = true;
+
+            if (nameWP != NameWeapon.FIRE && nameWP != NameWeapon.ROCKET)
+            {
+                SmartPool.instance.CreateBulletAndBulletFall(bulletPrefab, fx_BulletFall, 100);
+            }
+        }
+
+        if(GamePlayController.instance.rocket_Bullet_created)
+        {
+            if(nameWP == NameWeapon.ROCKET)
+            {
+                GamePlayController.instance.rocket_Bullet_created = true;
+
+                SmartPool.instance.CreateRocket(bulletPrefab, 100);
+            }
+        }
         
     }
 
