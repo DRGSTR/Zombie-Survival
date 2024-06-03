@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4030168695862946892}
   - component: {fileID: 4296017701788673453}
   - component: {fileID: 6919295753423551379}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Rocket Bullet
   m_TagString: RocketMissile
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7485646696150094350}
   - component: {fileID: 8387803287494201673}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun_line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 4804915100647576982}
   - component: {fileID: 945862920654118432}
   - component: {fileID: 3365563234586115915}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}

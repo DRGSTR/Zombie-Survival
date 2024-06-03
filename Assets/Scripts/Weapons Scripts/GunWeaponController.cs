@@ -68,6 +68,25 @@ public class GunWeaponController : WeaponController
         
         // SPAWN BULLET
 
+        if((transform != null) && (nameWP  != NameWeapon.FIRE))
+        {
+            if(nameWP != NameWeapon.ROCKET) 
+            {
+                GameObject bullet_Fall_FX = SmartPool.instance.SpawnBulletFallFX(spawnPoint.transform.position, Quaternion.identity);
+
+                // finding out where tommy is facing
+                bullet_Fall_FX.transform.localScale = (transform.root.eulerAngles.y > 1f) ? new Vector3(-1f, 1f, 1f) : new Vector3(1f, 1f, 1f);
+
+                StartCoroutine(WaitForShootEffect());
+            }
+
+            SmartPool.instance.SpawnBullet(spawnPoint.transform.position, new Vector3(-transform.root.localScale.x, 0f, 0f), spawnPoint.rotation, nameWP);
+        }
+        else
+        {
+            StartCoroutine(ActiveFireCollider());
+        }
+
     } // PROCESS ATTACK
 
     IEnumerator WaitForShootEffect()
@@ -78,11 +97,12 @@ public class GunWeaponController : WeaponController
 
     IEnumerator ActiveFireCollider()
     {
-        fireCollider.enabled = true;
+        //fireCollider.enabled = true;
 
+        fx_Shot.Play();
         yield  return fire_ColliderWait;
 
-        fireCollider.enabled = false;
+        //fireCollider.enabled = false;
     }
 
 } // class

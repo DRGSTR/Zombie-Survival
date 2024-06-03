@@ -71,7 +71,7 @@ public class SmartPool : MonoBehaviour
         return null;
     }
 
-    public void SpawnBullet(Vector3 position, Quaternion rotation, NameWeapon weaponName)
+    public void SpawnBullet(Vector3 position,Vector3 direction, Quaternion rotation, NameWeapon weaponName)
     {
         if(weaponName != NameWeapon.ROCKET)
         {
@@ -86,6 +86,8 @@ public class SmartPool : MonoBehaviour
                     // GET THE BULLET SCRIPT    
 
                     // SET BULLET DAMAGE
+
+                    break;
                 }
             }
         }
@@ -102,6 +104,8 @@ public class SmartPool : MonoBehaviour
                     // GET THE BULLET SCRIPT
 
                     // SET BULLET DAMAGE
+
+                    break;
                 }
             }
         }

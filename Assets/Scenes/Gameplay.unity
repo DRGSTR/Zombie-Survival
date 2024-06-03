@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tommy
       objectReference: {fileID: 0}
+    - target: {fileID: 1940654426450688, guid: 28df8aee1be1e0048bdafab6ff80488b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4668976323760658, guid: 28df8aee1be1e0048bdafab6ff80488b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
