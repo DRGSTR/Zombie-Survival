@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 8123000430884712858}
   - component: {fileID: 7499109122093559091}
   - component: {fileID: 2258115137716775697}
+  - component: {fileID: 6154532634929167029}
   m_Layer: 0
   m_Name: Bullet Fall FX
   m_TagString: Untagged
@@ -4804,3 +4805,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &6154532634929167029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6395435899936227237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510353c78bbc807488490380578c30f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

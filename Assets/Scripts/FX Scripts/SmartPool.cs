@@ -84,6 +84,7 @@ public class SmartPool : MonoBehaviour
                     bullet_Prefabs[i].transform.rotation = rotation;
 
                     // GET THE BULLET SCRIPT    
+                    bullet_Prefabs[i].GetComponent<BulletController>().SetDirection(direction);
 
                     // SET BULLET DAMAGE
 
@@ -102,6 +103,7 @@ public class SmartPool : MonoBehaviour
                     rocket_Bullet_Prefabs[i].transform.rotation = rotation;
 
                     // GET THE BULLET SCRIPT
+                    rocket_Bullet_Prefabs[i].GetComponent<BulletController>().SetDirection(direction);
 
                     // SET BULLET DAMAGE
 

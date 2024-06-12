@@ -16,8 +16,9 @@ public class GunWeaponController : WeaponController
 
     void Start()
     {
-        if(!GamePlayController.instance.bullet_And_BulletFX_Created)
+        if (!GamePlayController.instance.bullet_And_BulletFX_Created)
         {
+
             GamePlayController.instance.bullet_And_BulletFX_Created = true;
 
             if (nameWP != NameWeapon.FIRE && nameWP != NameWeapon.ROCKET)
@@ -26,16 +27,18 @@ public class GunWeaponController : WeaponController
             }
         }
 
-        if(GamePlayController.instance.rocket_Bullet_created)
+        if (!GamePlayController.instance.rocket_Bullet_created)
         {
-            if(nameWP == NameWeapon.ROCKET)
+
+            if (nameWP == NameWeapon.ROCKET)
             {
                 GamePlayController.instance.rocket_Bullet_created = true;
 
                 SmartPool.instance.CreateRocket(bulletPrefab, 100);
+
             }
+
         }
-        
     }
 
     public override void ProcessAttack()
