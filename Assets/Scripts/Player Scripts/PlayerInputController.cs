@@ -19,22 +19,22 @@ public class PlayerInputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q)) 
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            weaponManager.SwitchWeapons();        
+            weaponManager.SwitchWeapons();
         }
 
-        if(Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKey(KeyCode.L))
         {
             isHoldAttack = true;
         }
         else
         {
             weaponManager.ResetAttack();
-            isHoldAttack=false;
+            isHoldAttack = false;
         }
 
-        if(isHoldAttack && canShoot)
+        if (isHoldAttack && canShoot)
         {
             weaponManager.Attack();
         }
